@@ -9,14 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-     
+    
+    
+    
+    
     
   }
   
+  @IBAction func addMilk() {
+    cofeMachine().addMilkToTank()
+  }
+  
+  @IBAction func addWater() {
+    cofeMachine().addWaterToTank()
+  }
+  
+  
+  
+}
+
+
+class cofeMachine: NSObject {
   //resources income
   var water = 500
   var milk = 500
@@ -32,9 +49,8 @@ class ViewController: UIViewController {
   var milkTankState = 0
   var beansTankState = 0
   
-  
   //actions
-  @IBAction func addMilkToTank() {
+  func addMilkToTank() {
     print("milk")
     if milkTankState < milkTankCapasity {
       milkTankState += milk
@@ -44,7 +60,7 @@ class ViewController: UIViewController {
     }
   }
   
-  @IBAction func addWaterToTank() {
+  func addWaterToTank() {
     print("water")
     if waterTankState < waterTankCapasity {
       waterTankState += water
@@ -58,21 +74,13 @@ class ViewController: UIViewController {
     
   }
   
-  
   //products
   
   func makeCapuchino() {
-
     
   }
   
   func makeEspresso() {
     
   }
-  
-
-  
-  
-  
-  
 }
