@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     print("Water tank - \(firstMachine.waterTankLevel)")
     print("Milk tank - \(firstMachine.milkTankLevel)")
     print("Beans tank - \(firstMachine.beansTankLevel)")
+    print("Trash bin - \(firstMachine.trashBinLevel)")
   }
   
   

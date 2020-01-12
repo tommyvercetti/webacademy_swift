@@ -10,28 +10,34 @@ import UIKit
 
 class CofeMachine: NSObject {
   //resources income
-  var water = 500
-  var milk = 750
-  var beans = 350
+  let water = 500
+  let milk = 750
+  let beans = 350
+  
+  
   
   //capacity of tanks
   let waterTankCapasity = 2000
   let milkTankCapasity = 1000
   let beansTankCapasity = 2500
+  let trashBinCapasity = 2500
+  
   
   //tankState
   var waterTankLevel = 0
   var milkTankLevel = 0
   var beansTankLevel = 0
+  var trashBinLevel = 0
+  
   
   //portions for making product
   var waterPortion = 50
   var milkPortion = 50
   var beansPortion = 50
+  var trashPortion = 50
   
   
-  
-  //check level of ingridients
+  //check level of tanks
   func isEnoughIngridientsInTanks(waterTank: Int, milkTank: Int, beansTank: Int) -> Bool {
     var result: Bool = false
     if waterTankLevel >= waterPortion && milkTankLevel >= milkPortion && beansTankLevel >= beansPortion{
@@ -41,7 +47,13 @@ class CofeMachine: NSObject {
     
   }
   
-  
+  func isTrashBinIsEmpty(trashTank: Int) -> Bool {
+    var result: Bool = false
+    if trashBinLevel <= trashBinCapasity {
+      result = true
+    }
+    return result
+  }
   
   //actions
   func addMilkToTank() {
@@ -74,30 +86,47 @@ class CofeMachine: NSObject {
     }
   }
   
+  func cleanTrashBin() {
+    trashBinLevel = 0
+  }
+  
   //products
   
+  
+  
   func makeCapuchino() {
-    if isEnoughIngridientsInTanks(waterTank: waterTankLevel, milkTank: milkTankLevel, beansTank: beansTankLevel) {
-      waterTankLevel -= waterPortion * 5
-      beansTankLevel -= beansPortion * 2
-      milkTankLevel -= milkPortion * 1
-      print("water level - \(waterTankLevel)")
-      print("beans level - \(beansTankLevel)")
-      print("milk level - \(milkTankLevel)")
+    if isTrashBinIsEmpty(trashTank: trashBinLevel) {
+      if isEnoughIngridientsInTanks(waterTank: waterTankLevel, milkTank: milkTankLevel, beansTank: beansTankLevel) {
+        waterTankLevel -= waterPortion * 5
+        beansTankLevel -= beansPortion * 2
+        milkTankLevel -= milkPortion * 2
+        trashBinLevel += beansPortion * 2
+        print("Capuchino ready :coffee:")
+      } else {
+        print("not enought ingridients")
+      }
     } else {
-      print("not enought ingridients")
+      print("Clean trash bin")
     }
-    
     
   }
   
   func makeEspresso() {
-    waterTankLevel -= 150
-    beansTankLevel -= 150
-    milkTankLevel -= 150
-    print("water level - \(waterTankLevel)")
-    print("beans level - \(beansTankLevel)")
-    print("milk level - \(milkTankLevel)")
+    if isTrashBinIsEmpty(trashTank: trashBinLevel) {
+      if isEnoughIngridientsInTanks(waterTank: waterTankLevel, milkTank: milkTankLevel, beansTank: beansTankLevel) {
+        waterTankLevel -= waterPortion * 2
+        beansTankLevel -= beansPortion * 2
+        milkTankLevel -= milkPortion * 1
+        trashBinLevel += beansPortion * 2
+        print("Espresso ready :coffee:")
+      } else {
+        print("not enought ingridients")
+      }
+    }  else {
+      print("Clean trash bin")
+    }
+    
   }
+  
   
 }
