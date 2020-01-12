@@ -40,7 +40,12 @@ class ViewController: UIViewController {
     firstMachine.makeEspresso()
   }
   
- 
+  @IBAction func showLevelOfIngridientsButton() {
+    print("Water tank - \(firstMachine.waterTankLevel)")
+    print("Milk tank - \(firstMachine.milkTankLevel)")
+    print("Beans tank - \(firstMachine.beansTankLevel)")
+  }
+  
   
 }
 

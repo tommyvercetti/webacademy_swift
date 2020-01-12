@@ -55,6 +55,14 @@
                                     <action selector="makeEspressoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fn-Ew-xDZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="310-HX-LIg">
+                                <rect key="frame" x="121" y="556" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Level of Ingridients"/>
+                                <connections>
+                                    <action selector="showLevelOfIngridientsButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="OyI-3H-df0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -31,14 +31,14 @@ class CofeMachine: NSObject {
   
   
   
-  //conditions
+  //check level of ingridients
   func isEnoughIngridientsInTanks(waterTank: Int, milkTank: Int, beansTank: Int) -> Bool {
     var result: Bool = false
     if waterTankLevel >= waterPortion && milkTankLevel >= milkPortion && beansTankLevel >= beansPortion{
       result = true
     }
-          return result
-
+    return result
+    
   }
   
   
