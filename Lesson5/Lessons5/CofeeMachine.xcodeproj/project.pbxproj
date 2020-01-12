@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E611144223C8F22900F0234C /* CofeMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E611144123C8F22900F0234C /* CofeMachine.swift */; };
 		E6C797F723C7657E007A9AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C797F623C7657E007A9AA4 /* AppDelegate.swift */; };
 		E6C797F923C7657E007A9AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C797F823C7657E007A9AA4 /* SceneDelegate.swift */; };
 		E6C797FB23C7657E007A9AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C797FA23C7657E007A9AA4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E611144123C8F22900F0234C /* CofeMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CofeMachine.swift; sourceTree = "<group>"; };
 		E6C797F323C7657E007A9AA4 /* CofeeMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CofeeMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C797F623C7657E007A9AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6C797F823C7657E007A9AA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				E6C797F623C7657E007A9AA4 /* AppDelegate.swift */,
 				E6C797F823C7657E007A9AA4 /* SceneDelegate.swift */,
 				E6C797FA23C7657E007A9AA4 /* ViewController.swift */,
+				E611144123C8F22900F0234C /* CofeMachine.swift */,
 				E6C797FC23C7657E007A9AA4 /* Main.storyboard */,
 				E6C797FF23C76583007A9AA4 /* Assets.xcassets */,
 				E6C7980123C76583007A9AA4 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				E6C797FB23C7657E007A9AA4 /* ViewController.swift in Sources */,
 				E6C797F723C7657E007A9AA4 /* AppDelegate.swift in Sources */,
+				E611144223C8F22900F0234C /* CofeMachine.swift in Sources */,
 				E6C797F923C7657E007A9AA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

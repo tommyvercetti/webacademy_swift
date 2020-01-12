@@ -16,19 +16,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwC-Zp-1gm">
-                                <rect key="frame" x="69" y="221" width="60" height="30"/>
+                                <rect key="frame" x="62" y="424" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Milk"/>
                                 <connections>
-                                    <action selector="addMilk" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKG-oS-r1e"/>
+                                    <action selector="addMilkButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWr-5d-dgL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fid-0z-LV0">
-                                <rect key="frame" x="265" y="221" width="72" height="30"/>
+                                <rect key="frame" x="171" y="424" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Water"/>
                                 <connections>
-                                    <action selector="addWater" destination="BYZ-38-t0r" eventType="touchUpInside" id="AfG-DD-qfn"/>
+                                    <action selector="addWaterButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkD-O2-gqN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ9-a5-ezD">
+                                <rect key="frame" x="299" y="424" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Beans"/>
+                                <connections>
+                                    <action selector="addBeansButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="AI3-a0-Ind"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCl-yE-JfY">
+                                <rect key="frame" x="35" y="148" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Make Capuchino"/>
+                                <connections>
+                                    <action selector="makeCapuchinoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="K0a-1W-eew"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vH-Cl-0hm">
+                                <rect key="frame" x="284" y="148" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Make Espresso"/>
+                                <connections>
+                                    <action selector="makeEspressoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fn-Ew-xDZ"/>
                                 </connections>
                             </button>
                         </subviews>

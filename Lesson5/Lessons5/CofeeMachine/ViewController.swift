@@ -10,77 +10,39 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  let firstMachine = CofeMachine.init()
+  
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     
-    
-    
-    
-    
   }
   
-  @IBAction func addMilk() {
-    cofeMachine().addMilkToTank()
+  @IBAction func addMilkButton() {
+    firstMachine.addMilkToTank()
   }
   
-  @IBAction func addWater() {
-    cofeMachine().addWaterToTank()
+  @IBAction func addWaterButton() {
+    firstMachine.addWaterToTank()
   }
   
+  @IBAction func addBeansButton() {
+    firstMachine.addBeansToTank()
+  }
   
+  @IBAction func makeCapuchinoButton() {
+    firstMachine.makeCapuchino()
+  }
+  
+  @IBAction func makeEspressoButton() {
+    firstMachine.makeEspresso()
+  }
+  
+ 
   
 }
 
 
-class cofeMachine: NSObject {
-  //resources income
-  var water = 500
-  var milk = 500
-  var beans = 500
-  
-  //capacity of tanks
-  let waterTankCapasity = 2000
-  let milkTankCapasity = 1000
-  let beansTankCapasity = 3000
-  
-  //tankState
-  var waterTankState = 0
-  var milkTankState = 0
-  var beansTankState = 0
-  
-  //actions
-  func addMilkToTank() {
-    print("milk")
-    if milkTankState < milkTankCapasity {
-      milkTankState += milk
-      print(milkTankState)
-    } else {
-      print("milk tank is almost full - \(milkTankState). maximum capacity is \(milkTankCapasity)")
-    }
-  }
-  
-  func addWaterToTank() {
-    print("water")
-    if waterTankState < waterTankCapasity {
-      waterTankState += water
-      print(waterTankState)
-    } else {
-      print("water tank is almost full - \(waterTankState). maximum capacity is \(waterTankCapasity)")
-    }
-  }
-  
-  func addBeansToTank() {
-    
-  }
-  
-  //products
-  
-  func makeCapuchino() {
-    
-  }
-  
-  func makeEspresso() {
-    
-  }
-}
+
