@@ -10,6 +10,8 @@ import UIKit
 
 class CofeMachine: NSObject {
   
+
+  
   //resources income
   let water = 500
   let milk = 750
@@ -32,6 +34,29 @@ class CofeMachine: NSObject {
   var milkPortion = 50
   var beansPortion = 50
   var trashPortion = 50
+  
+  
+  func fff() {
+    let waterPortion = 50
+    let milkPortion = 50
+    let beansPortion = 50
+    let trashPortion = 50
+    
+    var waterPortionMultipluer = 0
+    var milkPortionMultipluer = 0
+    var beansPortionMultipluer = 0
+    var trashPortionMultipluer = 0
+    
+    
+    var reciepeShablon: [Int] = [waterPortion, beansPortion, milkPortion, trashPortion]
+    
+    reciepeShablon = [waterPortion*waterPortionMultipluer, beansPortion*2, milkPortion*2, trashPortion*2]
+    
+  }
+  
+  func initialReciepe(reciepe:[Int]) {
+    var reciepeShablon: [Int] = [waterPortion, beansPortion, milkPortion, trashPortion]
+  }
   
   
   //check level of tanks
@@ -126,5 +151,7 @@ class CofeMachine: NSObject {
     }
     
   }
+  
+  
   
 }
