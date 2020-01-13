@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  @IBOutlet weak var titleLabel: UILabel!{
+    didSet{
+      titleLabel.text = "Imagine, there is no spoon \u{1F944}"
+    }
+  }
+  
   let firstMachine = CofeMachine.init()
-  
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,20 +37,30 @@ class ViewController: UIViewController {
   }
   
   @IBAction func makeCapuchinoButton() {
-    firstMachine.makeCapuchino()
+    titleLabel.text = firstMachine.makeCapuchino()
   }
   
   @IBAction func makeEspressoButton() {
     firstMachine.makeEspresso()
+    
+    //titleLabel.text = firstMachine.makeEspresso()
   }
   
   @IBAction func showLevelOfIngridientsButton() {
+    titleLabel.text = """
+    Water tank - \(firstMachine.waterTankLevel)
+    Milk tank - \(firstMachine.milkTankLevel)
+    Beans tank - \(firstMachine.beansTankLevel)
+    Trash bin - \(firstMachine.trashBinLevel)
+    """
+    titleLabel.numberOfLines = 4
+    
     print("Water tank - \(firstMachine.waterTankLevel)")
     print("Milk tank - \(firstMachine.milkTankLevel)")
     print("Beans tank - \(firstMachine.beansTankLevel)")
     print("Trash bin - \(firstMachine.trashBinLevel)")
+    
   }
-  
   
 }
 

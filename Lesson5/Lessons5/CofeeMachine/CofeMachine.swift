@@ -9,12 +9,11 @@
 import UIKit
 
 class CofeMachine: NSObject {
+  
   //resources income
   let water = 500
   let milk = 750
   let beans = 350
-  
-  
   
   //capacity of tanks
   let waterTankCapasity = 2000
@@ -22,13 +21,11 @@ class CofeMachine: NSObject {
   let beansTankCapasity = 2500
   let trashBinCapasity = 2500
   
-  
   //tankState
   var waterTankLevel = 0
   var milkTankLevel = 0
   var beansTankLevel = 0
   var trashBinLevel = 0
-  
   
   //portions for making product
   var waterPortion = 50
@@ -63,6 +60,7 @@ class CofeMachine: NSObject {
       print(milkTankLevel)
     } else {
       print("milk tank is almost full - \(milkTankLevel). maximum capacity is \(milkTankCapasity)")
+      
     }
   }
   
@@ -91,24 +89,25 @@ class CofeMachine: NSObject {
   }
   
   //products
-  
-  
-  
-  func makeCapuchino() {
+  func makeCapuchino() -> String {
+    var labelText: String = ""
     if isTrashBinIsEmpty(trashTank: trashBinLevel) {
-      if isEnoughIngridientsInTanks(waterTank: waterTankLevel, milkTank: milkTankLevel, beansTank: beansTankLevel) {
+      if isEnoughIngridientsInTanks(waterTank: waterTankLevel, milkTank: milkTankLevel, beansTank: beansTankLevel)  {
         waterTankLevel -= waterPortion * 5
         beansTankLevel -= beansPortion * 2
         milkTankLevel -= milkPortion * 2
         trashBinLevel += beansPortion * 2
+        labelText = "Capuchino ready \u{2615}"
         print("Capuchino ready :coffee:")
       } else {
+        labelText = "not enought ingridients"
         print("not enought ingridients")
       }
     } else {
+      labelText = "Clean trash bin"
       print("Clean trash bin")
     }
-    
+    return labelText
   }
   
   func makeEspresso() {
@@ -127,6 +126,5 @@ class CofeMachine: NSObject {
     }
     
   }
-  
   
 }
