@@ -39,6 +39,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E611144323CF38DF00F0234C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6C797FC23C7657E007A9AA4 /* Main.storyboard */,
+				E6C797FF23C76583007A9AA4 /* Assets.xcassets */,
+				E6C7980123C76583007A9AA4 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E611144423CF391300F0234C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6C797FA23C7657E007A9AA4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E611144523CF394200F0234C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E6C797F623C7657E007A9AA4 /* AppDelegate.swift */,
+				E6C797F823C7657E007A9AA4 /* SceneDelegate.swift */,
+				E6C7980423C76583007A9AA4 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E66DFA5F23CF63F300E5AA23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E611144123C8F22900F0234C /* CofeMachine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E6C797EA23C7657E007A9AA4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +94,10 @@
 		E6C797F523C7657E007A9AA4 /* CofeeMachine */ = {
 			isa = PBXGroup;
 			children = (
-				E6C797F623C7657E007A9AA4 /* AppDelegate.swift */,
-				E6C797F823C7657E007A9AA4 /* SceneDelegate.swift */,
-				E6C797FA23C7657E007A9AA4 /* ViewController.swift */,
-				E611144123C8F22900F0234C /* CofeMachine.swift */,
-				E6C797FC23C7657E007A9AA4 /* Main.storyboard */,
-				E6C797FF23C76583007A9AA4 /* Assets.xcassets */,
-				E6C7980123C76583007A9AA4 /* LaunchScreen.storyboard */,
-				E6C7980423C76583007A9AA4 /* Info.plist */,
+				E66DFA5F23CF63F300E5AA23 /* Model */,
+				E611144323CF38DF00F0234C /* View */,
+				E611144423CF391300F0234C /* Controller */,
+				E611144523CF394200F0234C /* SupportingFiles */,
 			);
 			path = CofeeMachine;
 			sourceTree = "<group>";
@@ -289,7 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CofeeMachine/Info.plist;
+				INFOPLIST_FILE = CofeeMachine/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CofeeMachine/Info.plist;
+				INFOPLIST_FILE = CofeeMachine/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

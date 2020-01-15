@@ -22,29 +22,27 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     
+    
+    
   }
   
   @IBAction func addMilkButton() {
-    firstMachine.addMilkToTank()
+    titleLabel.text = firstMachine.addMilkToTank()
   }
   
   @IBAction func addWaterButton() {
-    firstMachine.addWaterToTank()
+    titleLabel.text = firstMachine.addWaterToTank()
   }
   
   @IBAction func addBeansButton() {
-    firstMachine.addBeansToTank()
+    titleLabel.text = firstMachine.addBeansToTank()
   }
   
-  @IBAction func makeCapuchinoButton() {
-    titleLabel.text = firstMachine.makeCapuchino()
+  @IBAction func cleanBinButton(_ sender: UIButton) {
+    titleLabel.text = firstMachine.cleanTrashBin()
   }
   
-  @IBAction func makeEspressoButton() {
-    firstMachine.makeEspresso()
-    
-    //titleLabel.text = firstMachine.makeEspresso()
-  }
+  
   
   @IBAction func showLevelOfIngridientsButton() {
     titleLabel.text = """
@@ -54,14 +52,15 @@ class ViewController: UIViewController {
     Trash bin - \(firstMachine.trashBinLevel)
     """
     titleLabel.numberOfLines = 4
-    
-    print("Water tank - \(firstMachine.waterTankLevel)")
-    print("Milk tank - \(firstMachine.milkTankLevel)")
-    print("Beans tank - \(firstMachine.beansTankLevel)")
-    print("Trash bin - \(firstMachine.trashBinLevel)")
-    
   }
   
+  @IBAction func makeCapuchinoButton() {
+    titleLabel.text = firstMachine.makeCapuchino()
+  }
+  
+  @IBAction func makeEspressoButton() {
+    titleLabel.text = firstMachine.makeEspresso()
+  }
 }
 
 
